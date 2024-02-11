@@ -35,3 +35,18 @@ sns.heatmap(df_corr.corr())
 top15corrcaracteri = df_corr.corr()['SalePrice']
 top15corrcaracteri = top15corrcaracteri[:15]
 print(top15corrcaracteri)
+
+# Realizamos planos de scatter con variables relevates antes calculadas 
+plt.title("Scatter de 'SalePrice'vs '1stFlrSF'")
+plt.scatter(x=df_training['1stFlrSF'], y=df_training['SalePrice'])
+plt.plot()
+
+# Realizamos planos de scatter con variables relevates antes calculadas 
+plt.title("Scatter de 'SalePrice'vs 'OverallQual'")
+plt.scatter(x=df_training['OverallQual'], y=df_training['SalePrice'])
+plt.plot()
+
+# Realizamos planos de scatter con variables relevates antes calculadas 
+plt.title("Scatter de 'SalePrice'vs 'TotalBsmtSF'")
+plt.scatter(x=df_training['TotalBsmtSF'], y=df_training['SalePrice'])
+plt.plot()
