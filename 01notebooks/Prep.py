@@ -2,6 +2,7 @@
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt #https://matplotlib.org/2.0.2/users/pyplot_tutorial.html
+import statsmodels.api as smf #https://www.statsmodels.org/v0.10.2/importpaths.html
 
 
 # Cargar el dataset de entrenamiento que se encuentra en el mismo lugar de 
@@ -50,3 +51,14 @@ plt.plot()
 plt.title("Scatter de 'SalePrice'vs 'TotalBsmtSF'")
 plt.scatter(x=df_training['TotalBsmtSF'], y=df_training['SalePrice'])
 plt.plot()
+
+#elminamos los valores extremos, la segmentacion se debe a que en el histograma esos valores son pocos y están por encima del 95% de la muestra
+df_training.drop(df_training[(df_training['SalePrice']>450000)].index, inplace=True)
+
+# Observamos el nuevo tamaño de la base, se perdieron menos de 14 valores, el 0.001% de la base
+print("train size:",df_training.shape)
+
+# Preparamos los datos de la regresión, agregamos una constante
+X = df_training[['OverallQual','LotArea','GrLivArea','GarageCars','YearBuilt','YearRemodAdd','MSSubClass','1stFlrSF','TotalBsmtSF']]  # Cambia 'tu_variable_independiente' por el nombre de tu columna
+y = df_training['SalePrice'] 
+X = smf.add_constant(X)
