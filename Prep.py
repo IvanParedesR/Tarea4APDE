@@ -10,4 +10,4 @@ from sklearn.metrics import mean_squared_error
 import matplotlib.pyplot as plt #https://matplotlib.org/2.0.2/users/pyplot_tutorial.html
 
 # Cargar el dataset de entrenamiento que se encuentra en el mismo lugar de 
-df_training = pd.read_csv('train.csv')
+df_training = pd.read_csv('02Data/train.csv')
