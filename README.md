@@ -1,4 +1,5 @@
-# Tarea4APDE
-Se presenta la tarea 4 de la materia METODOS DE GRAN ESCALA - ITAM
+# Tarea4APDE - METODOS DE GRAN ESCALA - ITAM
+## Ivan Paredes Resendiz
+El repositorio corre un modelo una interfaz donde el usuario puede valorar una casa a partir del conjunto de datos con los que contamos.
 
-El repositorio crea una interfaz donde el usuario puede valorar una casa a partir del conjunto de datos con los que contamos
+## Obtención de datos
