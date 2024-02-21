@@ -1,0 +1,20 @@
+# environments.yml
+name: miproyecto-env
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.11
+  - scikit-learn
+  - pandas
+  - numpy
+  - pytest
+  - ipython
+  - jupyter
+  - jupyterlab
+  - matplotlib
+  - seaborn
+  - plotly
+  - pylint
+  - autopep8
+  - joblib
