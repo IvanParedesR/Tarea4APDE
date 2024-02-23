@@ -12,3 +12,13 @@ https://www.kaggle.com/code/gusthema/house-prices-prediction-using-tfdf
 
 
 ## Logs
+
+Título de tu proyecto
+Explicar qué hace
+Dependencias
+Inputs/Outputs
+Estructura del repo
+Cómo se ejecuta tu producto de datos
+Cómo instalarlo
+En algunos casos licencia
+Tabla de contenidos en caso de que sea muy largo
