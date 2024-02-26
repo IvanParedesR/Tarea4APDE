@@ -5,6 +5,8 @@ El repositorio corre un modelo una interfaz donde el usuario puede valorar una c
 
 The repository runs a model and interface where the user can value a house from the set of data we have. The model estimates the value of a house in the United States of America based on certain variables such as size, number of parking spaces, year of renovation. In this Readme you will find the data source, model characteristics, operation and some problems or dependencies that may arise.
 
+https://github.com/IvanParedesR/Tarea4APDE/blob/main/images/Casa1.jpg
+
 ## Obtención de datos
 Los datos provienen de la página educativa: 
 
