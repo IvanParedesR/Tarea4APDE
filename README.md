@@ -13,17 +13,20 @@ Los datos provienen de la página educativa:
 [Kaggle Houses prices ](https://www.kaggle.com/code/gusthema/house-prices-prediction-using-tfdf)
 
 ## Funcionamiento
+El repositorio esta compuesto por 4 carpetas numeradas del 00 al 04. Estas carpetas contienen: 00 el prototipo de este modelo, el 01 son el modelo, el 02 la data, el 03 los cuadros y tablas obtenidos y el 04 los logs.
 
+### Inputs/Outputs
+Ver carpeta 02 con los inputs y el 03 y 04 con los Outputs
+## Dependencias
 
+## Cómo se ejecuta tu producto de datos - Cómo instalarlo
+Puedes utilizar Git para clonar todo el repositorio. 
+* Necesitas tener Git instalado en tu computadora. Si aún no lo tienes, puedes descargarlo e instalarlo desde git-scm.com.
+* Abre la terminal o línea de comandos en tu computadora.
+* Utiliza el comando git clone seguido de la URL del repositorio de GitHub que deseas clonar. Esto copiará todo el repositorio en tu computadora. Por ejemplo: git clone
+* [Instructivo](https://github.com/usuario/repositorio.git).
 
-## Logs
+## Licencia
+La Licencia de este repositorio es la GNU. La Licencia Pública General de GNU (GNU General Public License, o GNU GPL) es una licencia de software libre ampliamente utilizada, que garantiza a los usuarios la libertad de compartir y cambiar todas las versiones de un programa para asegurar que permanezca libre para todos sus usuarios. 
 
-Título de tu proyecto
-Explicar qué hace
-Dependencias
-Inputs/Outputs
-Estructura del repo
-Cómo se ejecuta tu producto de datos
-Cómo instalarlo
-En algunos casos licencia
-Tabla de contenidos en caso de que sea muy largo
+![Licencia](/images/Licencia.jpg)
