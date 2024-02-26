@@ -1,4 +1,4 @@
-# Tarea4APDE - METODOS DE GRAN ESCALA - ITAM
+# Tarea 2 a 4 METODOS DE GRAN ESCALA - ITAM
 ## Ivan Paredes Resendiz
 ### Summary 
 El repositorio corre un modelo una interfaz donde el usuario puede valorar una casa a partir del conjunto de datos con los que contamos. El modelo estima el valor de una casa en los Estados Unidos de America a partir de ciertas variables como tamaño, número de estacionamientos, año de renovación. En este Readme encontrarás la fuente de datos, las caracteristicas del modelo, el funcionamiento y algunos problemas o depndencias que pueden surgir.
@@ -29,4 +29,4 @@ Puedes utilizar Git para clonar todo el repositorio.
 ## Licencia
 La Licencia de este repositorio es la GNU. La Licencia Pública General de GNU (GNU General Public License, o GNU GPL) es una licencia de software libre ampliamente utilizada, que garantiza a los usuarios la libertad de compartir y cambiar todas las versiones de un programa para asegurar que permanezca libre para todos sus usuarios. 
 
-![Licencia](/images/Licencia.jpg)
+![Licencia](/images/Licencia.png)
