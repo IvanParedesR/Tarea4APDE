@@ -26,6 +26,25 @@ Puedes utilizar Git para clonar todo el repositorio.
 * Utiliza el comando git clone seguido de la URL del repositorio de GitHub que deseas clonar. Esto copiará todo el repositorio en tu computadora. Por ejemplo: git clone
 * [Instructivo](https://github.com/usuario/repositorio.git).
 
+## Arbol parcial del repositorio
+├── 00Prototypo
+│   ├── 01_Iván_Paredes.ipynb
+│   └── txt.txt
+├── 01notebooks
+│   ├── 1prep.py
+│   ├── 2train.py
+│   └── 3inference.py
+├── 02Data
+│   ├── dataprocesada.csv
+│   └── train.csv
+├── 03graphs
+├── Enviroments.yml
+├── LICENSE
+├── README.md
+└── images
+    ├── Casa1.jpg
+    └── Licencia.png
+
 ## Licencia
 La Licencia de este repositorio es la GNU. La Licencia Pública General de GNU (GNU General Public License, o GNU GPL) es una licencia de software libre ampliamente utilizada, que garantiza a los usuarios la libertad de compartir y cambiar todas las versiones de un programa para asegurar que permanezca libre para todos sus usuarios. 
 
