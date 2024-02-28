@@ -1,29 +1,22 @@
-import seaborn as sns
-#import statsmodels.api as smf #https://www.statsmodels.org/v0.10.2/importpaths.html
-#import statsmodels.formula.api as smq
-#import statsmodels.regression.linear_model as sm
-#from sklearn.model_selection import train_test_split #https://scikit-learn.org/stable/
-#from sklearn.linear_model import LinearRegression
-#from sklearn.metrics import mean_squared_error
-import matplotlib.pyplot as plt #https://matplotlib.org/2.0.2/users/pyplot_tutorial.html
+# Cargamos librerías, en general agregamos su documentación para futura consulta.
+import pandas as pd
+import statsmodels.regression.linear_model as sm
+import statsmodels.api as smf #https://www.statsmodels.org/v0.10.2/importpaths.html
 
+#Cargar el dataset de entrenamiento que se encuentra en el mismo lugar de 
+df_procesado=pd.read_csv('02Data/dataprocesada.csv')
+
+# Preparamos los datos de la regresión corrigiendo lo que señalamos en la línea previa
+X = df_procesado[['OverallQual','LotArea','GarageCars','YearRemodAdd','MSSubClass','TotalBsmtSF']]  # Cambia 'tu_variable_independiente' por el nombre de tu columna
+y = df_procesado['SalePrice'] 
+X = smf.add_constant(X)
+model = sm.OLS(y,X)
+fitted_model = model.fit()
+fitted_model.summary()
 
 #Vemos las 10 primeras observaciones y las variables numericas.
-df_training.describe()
+df_procesado.describe()
 
-#Información de los tipos de variable, hay bastantes que son objeto.
-df_training.info()
-
-#Describimos la variable dependiente de precio de venta 
-print(df_training['SalePrice'].describe())
-
-#Graficamos su histograma
-plt.figure(figsize=(9, 5)) # Establecemos tamaño
-sns.distplot(df_training['SalePrice'], color='r', bins=50, hist_kws={'alpha': 0.4})
-
-#Eliminamos los datos que no son numericos y creamos un mapa de calor 
-#con la relación entre las distintas variables.
-df_corr = df_training.astype("float64",errors='ignore')
-df_corr = df_corr.select_dtypes(exclude="object")
-plt.subplots(figsize=(12,9))
-sns.heatmap(df_corr.corr())
+X_test = df_procesado[['OverallQual','LotArea','GarageCars','YearRemodAdd','MSSubClass','TotalBsmtSF']]
+X_test = smf.add_constant(X_test)
+df_procesado.describe()

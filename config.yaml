@@ -1,0 +1,34 @@
+# config.yaml
+
+main:
+  components_repository: "https://github.com/IvanParedesR/Tarea4APDE"
+  project_name: mi_proyecto
+  steps: all
+etl:
+  sample_data: "sample1.csv"
+  min_price: 10  # dollars
+  max_price: 350  # dollars
+modeling:
+  # Fraction of data to use for test (the remaining will be used for train and validation)
+  test_size: 0.2
+  # Fraction of remaining data to use for validation
+  val_size: 0.2
+  # Fix this for reproducibility, change to have new splits
+  random_seed: 42
+  # Column to use for stratification (use "none" for no stratification)
+  stratify_by: "neighbourhood_group"
+  # Maximum number of features to consider for the TFIDF applied to the title of the
+  # insertion (the column called "name")
+  max_tfidf_features: 5
+  # RandomForestRegressor. This is a subsample, but more could be added:
+  random_forest:
+    n_estimators: 100
+    max_depth: 15
+    min_samples_split: 4
+    min_samples_leaf: 3
+    # Here -1 means all available cores
+    n_jobs: -1
+    criterion: mae
+    max_features: 0.5
+    # DO not change the following
+    oob_score: true
