@@ -51,3 +51,4 @@ print("train size:",df_training.shape)
 X=df_training[['OverallQual','LotArea','GrLivArea','GarageCars','YearBuilt','YearRemodAdd','MSSubClass','1stFlrSF','TotalBsmtSF']]  # Cambia 'tu_variable_independiente' por el nombre de tu columna
 y=df_training['SalePrice'] 
 X=smf.add_constant(X)
+
