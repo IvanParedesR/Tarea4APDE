@@ -27,35 +27,35 @@ Puedes utilizar Git para clonar todo el repositorio.
 * [Instructivo](https://github.com/usuario/repositorio.git).
 
 ## Arbol parcial del repositorio
-├── 00Prototypo
+ ├── 00Prototypo
 
-│   ├── 01_Iván_Paredes.ipynb
+ │   ├── 01_Iván_Paredes.ipynb
 
-│   └── txt.txt
+ │   └── txt.txt
 
-├── 01notebooks
+ ├── 01notebooks
 
-│   ├── 1prep.py
+ │   ├── 1prep.py
+ 
+ │   ├── 2train.py
 
-│   ├── 2train.py
+ │   └── 3inference.py
 
-│   └── 3inference.py
+ ├── 02Data
 
-├── 02Data
+ │   ├── dataprocesada.csv
 
-│   ├── dataprocesada.csv
+ │   └── train.csv
 
-│   └── train.csv
+ ├── 03graphs
 
-├── 03graphs
+ ├── Enviroments.yml
 
-├── Enviroments.yml
+ ├── LICENSE
 
-├── LICENSE
+ ├── README.md
 
-├── README.md
-
-└── images
+ └── images
 
     ├── Casa1.jpg
     
