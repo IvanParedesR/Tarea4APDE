@@ -1,29 +1,25 @@
+# Cargamos librerías, en general agregamos su documentación para futura consulta.
+import pandas as pd
+import statsmodels.regression.linear_model as sm
+import statsmodels.api as smf #https://www.statsmodels.org/v0.10.2/importpaths.html
 
-model = sm.OLS(y,X)
-fitted_model = model.fit()
-fitted_model.summary()
+#Cargar el dataset de entrenamiento que se encuentra en el mismo lugar de 
+df_procesado=pd.read_csv('02Data/dataprocesada.csv')
 
 # Preparamos los datos de la regresión corrigiendo lo que señalamos en la línea previa
-X = df_training[['OverallQual','LotArea','GarageCars','YearRemodAdd','MSSubClass','TotalBsmtSF']]  # Cambia 'tu_variable_independiente' por el nombre de tu columna
-y = df_training['SalePrice'] 
+X = df_procesado[['OverallQual','LotArea','GarageCars','YearRemodAdd','MSSubClass','TotalBsmtSF']]  # Cambia 'tu_variable_independiente' por el nombre de tu columna
+y = df_procesado['SalePrice'] 
 X = smf.add_constant(X)
 model = sm.OLS(y,X)
 fitted_model = model.fit()
 fitted_model.summary()
 
-# Cargar el dataset de entrenamiento
-df_test = pd.read_csv('C:/Users/CFC/Downloads/house-prices-advanced-regression-techniques/test.csv')
-
-
-#Observamos su información, el número de datos que tenemos es cercano al que tenemos como entrenamiento
-df_test.info()
-
 #Vemos las 10 primeras observaciones y las variables numericas.
-df_test.describe()
+df_procesado.describe()
 
-X_test = df_test[['OverallQual','LotArea','GarageCars','YearRemodAdd','MSSubClass','TotalBsmtSF']]
+X_test = df_procesado[['OverallQual','LotArea','GarageCars','YearRemodAdd','MSSubClass','TotalBsmtSF']]
 X_test = smf.add_constant(X_test)
-df_test.describe()
+df_procesado.describe()
 
 ## Con el modelo antes calculado, aquí le pedimos al usuario que señale sus valores esperados para cada variable.
 numero1 = float(input(f"Del 1 al 10 en que tan buena condición esperas que este la casa, siendo 1 mala y 10 excelente: "))

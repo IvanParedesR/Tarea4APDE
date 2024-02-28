@@ -43,12 +43,13 @@ plt.scatter(x=df_training['TotalBsmtSF'], y=df_training['SalePrice'])
 plt.plot()
 #elminamos los valores extremos, la segmentacion se debe a que en el histograma 
 #esos valores son pocos y están por encima del 95% de la muestra
-df_training.drop(df_training[(df_training['SalePrice']>450000)].index, inplace=True)
+df_corr.drop(df_corr[(df_corr['SalePrice']>450000)].index, inplace=True)
 #Observamos el nuevo tamaño de la base, se perdieron menos de 14 valores
 #el 0.001% de la base
-print("train size:",df_training.shape)
+print("train size:",df_corr.shape)
 #Preparamos los datos de la regresión, agregamos una constante
-X=df_training[['OverallQual','LotArea','GrLivArea','GarageCars','YearBuilt','YearRemodAdd','MSSubClass','1stFlrSF','TotalBsmtSF']]  # Cambia 'tu_variable_independiente' por el nombre de tu columna
-y=df_training['SalePrice'] 
+X=df_corr[['OverallQual','LotArea','GrLivArea','GarageCars','YearBuilt','YearRemodAdd','MSSubClass','1stFlrSF','TotalBsmtSF']]  # Cambia 'tu_variable_independiente' por el nombre de tu columna
+y=df_corr['SalePrice'] 
 X=smf.add_constant(X)
-
+#Guardamos datos procesado
+df_corr.to_csv('02Data/dataprocesada.csv', index=False)
