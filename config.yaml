@@ -1,34 +1,28 @@
 # config.yaml
 
-main:
-  components_repository: "https://github.com/IvanParedesR/Tarea4APDE"
-  project_name: mi_proyecto
-  steps: all
-etl:
-  sample_data: "sample1.csv"
-  min_price: 10  # dollars
-  max_price: 350  # dollars
-modeling:
-  # Fraction of data to use for test (the remaining will be used for train and validation)
-  test_size: 0.2
-  # Fraction of remaining data to use for validation
-  val_size: 0.2
-  # Fix this for reproducibility, change to have new splits
-  random_seed: 42
-  # Column to use for stratification (use "none" for no stratification)
-  stratify_by: "neighbourhood_group"
-  # Maximum number of features to consider for the TFIDF applied to the title of the
-  # insertion (the column called "name")
-  max_tfidf_features: 5
-  # RandomForestRegressor. This is a subsample, but more could be added:
-  random_forest:
-    n_estimators: 100
-    max_depth: 15
-    min_samples_split: 4
-    min_samples_leaf: 3
-    # Here -1 means all available cores
-    n_jobs: -1
-    criterion: mae
-    max_features: 0.5
-    # DO not change the following
-    oob_score: true
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        python-version: [3.7, 3.8, 3.9, 3.10]
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v2
+      with:
+        python-version: ${{ matrix.python-version }}
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+    - name: Run a one-liner script
+      run: python your-script.py
+      # Reemplaza "your-script.py" con el nombre de tu script de Python que deseas ejecutar
+    - name: Run tests
+      run: |
+        # Aquí puedes agregar comandos para ejecutar tus pruebas
+        echo "Ejecutando pruebas..."
