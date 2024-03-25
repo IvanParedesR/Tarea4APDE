@@ -1,4 +1,4 @@
-# Cargamos librerías, en general agregamos su documentación para futura consulta, salvo por pandas que es de uso más común.
+# Cargamos librerías, en general agregamos su documentación para futura consulta.
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt #https://matplotlib.org/2.0.2/users/pyplot_tutorial.html
