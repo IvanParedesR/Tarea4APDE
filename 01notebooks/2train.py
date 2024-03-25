@@ -3,8 +3,17 @@ import pandas as pd
 import statsmodels.regression.linear_model as sm
 import statsmodels.api as smf #https://www.statsmodels.org/v0.10.2/importpaths.html
 
-#Cargar el dataset de entrenamiento que se encuentra en el mismo lugar de 
-df_procesado=pd.read_csv('02Data/dataprocesada.csv')
+def load_data(file_path):
+    try:
+        df = pd.read_csv(file_path)
+        print(df.describe())  # Asegúrate de imprimir el resultado de describe()
+        return df  # Retornar el DataFrame cargado
+    except FileNotFoundError:
+        print(f"El archivo no está en este path: {file_path}")
+        print(f"Busca en otro lugar, por lo pronto no podemos proceder.")
+
+#Cargar el dataset de entrenamiento
+df_procesado = load_data('02Data/dataprocesada.csv')
 
 # Preparamos los datos de la regresión corrigiendo lo que señalamos en la línea previa
 X = df_procesado[['OverallQual','LotArea','GarageCars','YearRemodAdd','MSSubClass','TotalBsmtSF']]  # Cambia 'tu_variable_independiente' por el nombre de tu columna

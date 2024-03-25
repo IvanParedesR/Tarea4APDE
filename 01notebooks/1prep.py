@@ -7,16 +7,18 @@ import statsmodels.api as smf #https://www.statsmodels.org/v0.10.2/importpaths.h
 def load_data(file_path):
     try:
         df = pd.read_csv(file_path)
-        return df.head(5)
+        print(df.describe())  # Asegúrate de imprimir el resultado de describe()
+        return df  # Retornar el DataFrame cargado
     except FileNotFoundError:
         print(f"El archivo no está en este path: {file_path}")
         print(f"Busca en otro lugar, por lo pronto no podemos proceder.")
 
 #Cargar el dataset de entrenamiento
-load_data('02Data/train.csv')
+df_training = load_data('02Data/train.csv')
 
 #Ver el tamaño del set
 print("train size:",df_training.shape)
+
 # El resultado es: train size: (1460, 81)
 #Vemos las 10 primeras observaciones y las variables numericas.
 df_training.describe()
