@@ -20,9 +20,6 @@ jobs:
         python -m pip install --upgrade pip
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: Run a one-liner script
-      run: python your-script.py
-      # Reemplaza "your-script.py" con el nombre de tu script de Python que deseas ejecutar
+      run: 0Intro.py
     - name: Run tests
       run: |
-        # Aquí puedes agregar comandos para ejecutar tus pruebas
-        echo "Ejecutando pruebas..."
