@@ -31,6 +31,7 @@ df_corr = df_training.astype("float64",errors='ignore')
 df_corr = df_corr.select_dtypes(exclude="object")
 plt.subplots(figsize=(12,9))
 sns.heatmap(df_corr.corr())
+plt.show()
 
 # Catalogamos las 10 caracteristicas principales
 top15corrcaracteri = df_corr.corr()['SalePrice']
@@ -41,11 +42,13 @@ print(top15corrcaracteri)
 plt.title("Scatter de 'SalePrice'vs '1stFlrSF'")
 plt.scatter(x=df_training['1stFlrSF'], y=df_training['SalePrice'])
 plt.plot()
+plt.show()
 
 # Realizamos planos de scatter con variables relevates antes calculadas 
 plt.title("Scatter de 'SalePrice'vs 'OverallQual'")
 plt.scatter(x=df_training['OverallQual'], y=df_training['SalePrice'])
 plt.plot()
+plt.show()
 
 # Realizamos planos de scatter con variables relevates antes calculadas 
 plt.title("Scatter de 'SalePrice'vs 'TotalBsmtSF'")
