@@ -42,10 +42,12 @@ print(top15corrcaracteri)
 plt.title("Scatter de 'SalePrice'vs '1stFlrSF'")
 plt.scatter(x=df_training['1stFlrSF'], y=df_training['SalePrice'])
 plt.plot()
+plt.show()
 # Realizamos planos de scatter con variables relevates antes calculadas 
 plt.title("Scatter de 'SalePrice'vs 'OverallQual'")
 plt.scatter(x=df_training['OverallQual'], y=df_training['SalePrice'])
 plt.plot()
+plt.show()
 
 # Realizamos planos de scatter con variables relevates antes calculadas 
 plt.title("Scatter de 'SalePrice'vs 'TotalBsmtSF'")
