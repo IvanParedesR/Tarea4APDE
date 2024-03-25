@@ -46,11 +46,7 @@ plt.plot()
 plt.title("Scatter de 'SalePrice'vs 'OverallQual'")
 plt.scatter(x=df_training['OverallQual'], y=df_training['SalePrice'])
 plt.plot()
-<<<<<<< HEAD:01notebooks/Prep.py
-plt.show()
 
-=======
->>>>>>> e4ab4a2bf4358bb003ccf4f8709c27c71a266f7a:01notebooks/1prep.py
 # Realizamos planos de scatter con variables relevates antes calculadas 
 plt.title("Scatter de 'SalePrice'vs 'TotalBsmtSF'")
 plt.scatter(x=df_training['TotalBsmtSF'], y=df_training['SalePrice'])
