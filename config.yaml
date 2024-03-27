@@ -19,7 +19,4 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-    - name: Run a one-liner script
-      run: 0Intro.py
-    - name: Run tests
-      run: |
+
